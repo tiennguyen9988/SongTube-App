@@ -86,15 +86,15 @@ class _AudioDownloadMenuState extends State<AudioDownloadMenu> with TickerProvid
         TagsControllers tags = TagsControllers();
         tags.updateTextControllersFromStream(
           StreamInfoItem(
-            widget.video.url,
-            widget.video.id,
+            widget.video.videoInfo.url,
+            widget.video.videoInfo.id,
             element.title,
-            widget.video.uploaderName,
-            widget.video.uploaderUrl,
-            widget.video.uploadDate,
-            widget.video.uploadDate,
-            widget.video.length,
-            widget.video.viewCount
+            widget.video.videoInfo.uploaderName,
+            widget.video.videoInfo.uploaderUrl,
+            widget.video.videoInfo.uploadDate,
+            widget.video.videoInfo.uploadDate,
+            widget.video.videoInfo.length,
+            widget.video.videoInfo.viewCount
           )
         );
         segmentTracks.add(StreamSegmentTrack(element, tags, true));
